@@ -25,7 +25,7 @@ module.exports = (robot) ->
         editable: false
       }
     }
-    swishObj.amount = { value: value, editable: true } if has_value
+    swishObj.amount = { value: parseInt(value, 10), editable: true } if has_value
     jsonstring = JSON.stringify swishObj
 
     if has_value
